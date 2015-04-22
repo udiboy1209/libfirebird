@@ -1,0 +1,15 @@
+# Object files and libraries
+*.o
+
+
+#build folders
+build/
+test/build/
+
+#avr-gcc build files
+*.hex 
+*.eep
+*.o.d
+
+#vim backup
+*.swp
