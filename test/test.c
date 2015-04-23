@@ -5,12 +5,6 @@
 #include <firebird/lcd.h>
 #include <firebird/motor.h>
 #include <firebird/sensor.h>
-#include <firebird/timer.h>
-
-#define PI 3.141592
-
-#define SHARP_THRESHOLD 200 // mm
-#define IR_THRESHOLD 128
 
 void LED_bargraph_config (void)
 {
@@ -24,7 +18,6 @@ void init_devices()
     lcd_init();
     motor_init();
     sensor_init();
-    timer_init();
     LED_bargraph_config();
     sei();
 }
@@ -41,7 +34,9 @@ int main()
     velocity(128,128);
 
     while(1){
-        lcd_print(2,1,sharp_distance(SHARP_N),5);   
+        forward_mm(100);
+
+        angle_hard(45,CLOCKWISE);
     }
 
     return 0;

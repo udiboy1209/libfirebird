@@ -3,7 +3,7 @@
 ###############################################################################
 
 ## General Flags
-PROJECT = path_follow
+PROJECT = test
 MCU = atmega2560
 OBJDIR = build
 
