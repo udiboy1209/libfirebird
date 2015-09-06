@@ -1,7 +1,3 @@
-###############################################################################
-# Makefile for the project Serial_Communication
-###############################################################################
-
 ## General Flags
 PROJECT = test
 MCU = atmega2560
@@ -25,9 +21,8 @@ ASMFLAGS = $(COMMON)
 ASMFLAGS += $(CFLAGS)
 ASMFLAGS += -x assembler-with-cpp -Wa,-gdwarf2
 
-INCLUDES = -I"/home/udiboy1209/Projects/libfirebird"
-
-LIBDIRS = -L"/home/udiboy1209/Projects/libfirebird"
+INCLUDES = -I"$(HOME)/.local/lib"
+LIBDIRS = -L"$(HOME)/.local/lib"
 LIBS = -lfirebird
 
 ## Linker flags
